@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <title>AJAX/JSON Friends and Family</title>
+  <script type="text/javascript" src="FriendsandFamily.js"></script>
+  </head>
+
+<body>
+<h1 style="text-align:center;">AJAX/JSON Friends and Family Search</h1>
+<h4 style="text-align:center;">Search for Navia's friends and family (:</h4>
+<h5 style="text-align:center;">To see everyone on my list, just press search!</h5>
+
+<div style="margin-left:auto; margin-right:auto; width:25%; padding:10px;">
+                   <select id='RelationSelect' onchange ="startSearch()"></select>
+                   <label>Search by Relationship</label>
+</div>
+
+<div style="margin-left:auto; margin-right:auto; width:25%; padding:10px;">
+
+                   <input type="text" name="NameSearch" id="NameSearch" onkeyup ="startSearch()">
+                   <label for="NameSearch">Search by Name</label>
+</div>
+
+<div style="margin-left:auto; margin-right:auto; width:25%; padding:10px;">
+
+                   <button  onclick="startSearch()">Search</button>
+                   <button onclick="resetSearch()">Reset Search</button>
+</div>
+
+           <h5 class="results" style="text-align:center;"><b>Friends and Family Results:</b></h5>
+           <table style="margin-left:auto; margin-right:auto;" >
+               <thead>
+                   <tr>
+                       <th>Name</th>
+                       <th>Relationship</th>
+                   </tr>
+               </thead>
+               <tbody id="friendsFamilyList">
+                   <tr style="padding:10px;">
+                       <td>None Selected</td>
+                       <td>None Selected</td>
+                   </tr>
+               </tbody>
+           </table>
+           <script>generateOptions();</script>
+
+</body>
+
+</html>
